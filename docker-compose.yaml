@@ -1,0 +1,14 @@
+version: '2.27'
+
+services:
+  app:
+    build: .
+    container_name: app
+    ports:
+      - 3000:3000
+    environment:
+      LOG_DIR: /sample_log_dir
+    volumes:
+      # using a directory for easy testing
+      - ./sample_log_dir:/sample_log_dir
+
